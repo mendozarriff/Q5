@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderNav from './HeaderNav';
-import logo  from './../../images/q5_logo.png';
+import logo  from '../../../images/q5_logo.png';
 const Header = ()=>{
     return(
     <div>

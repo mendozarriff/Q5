@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem} from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 const  HeaderNav = ({ logo, altImage, logoSize, backgroundColor, linkColor}) => {
 
@@ -18,30 +19,33 @@ const  HeaderNav = ({ logo, altImage, logoSize, backgroundColor, linkColor}) => 
         <Navbar style={{background:`${backgroundColor}`}} dark   expand="md">
         <div className="navbarDesktop">
         <NavItem className="hideInMobile">
-                <NavLink style={{color: `${linkColor}`}} href="/">(850) 764-3189</NavLink>
+                <p style={{color: `${linkColor}`}} href="#">(850) 764-3189</p>
             </NavItem>
           <NavbarBrand href="/"><img style={{width:`${logoSize}`}} src={logo} alt={altImage}/></NavbarBrand>
             <NavItem className="hideInMobile">
-                <NavLink style={{color: `${linkColor}`}} href="/">Drop us a line!</NavLink>
+                <a style={{color: `${linkColor}`}} href="#">Drop us a line!</a>
             </NavItem>
         </div>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={collapsed.isOpen} navbar>
             <Nav className="ml-auto" navbar>
                 <NavItem>
-                <NavLink style={{color: `${linkColor}`}} href="/">blog</NavLink>
+                <NavLink style={{color: `${linkColor}`}} to="/blog" >blog</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink style={{color: `${linkColor}`}} href="/">home</NavLink>
+                <NavLink style={{color: `${linkColor}`}} to="/">home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink style={{color: `${linkColor}`}} href="/">get in touch</NavLink>
+                <NavLink style={{color: `${linkColor}`}} to="/getInTouch">get in touch</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink style={{color: `${linkColor}`}} href="/">portfolio</NavLink>
+                <NavLink style={{color: `${linkColor}`}} to="/about">about</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink style={{color: `${linkColor}`}} href="/">contact</NavLink>
+                <NavLink style={{color: `${linkColor}`}} to="/portfolio">portfolio</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink style={{color: `${linkColor}`}} to="/contact">contact</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
