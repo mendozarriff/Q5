@@ -3,6 +3,27 @@
     margin: 0;
 }
 
+/* .bCmlkr {
+    padding: 10px 0 10px 10px!important;
+}
+
+.ilmQEB {
+    padding: 10px 0 10px 10px!important;
+}
+
+.hqeZFh{
+    padding: 10px 0 10px 10px!important;
+
+}
+
+.bCmlkr{
+    margin: 10px 0!important;
+}
+
+.sc-bxivhb .hqeZFh {
+    padding: 10px 0 10px 10px!important;
+} */
+
 img {
     width: 100%;
 }
@@ -50,6 +71,12 @@ p {
     font-size: 14px!important;
 }
 
+.btn-secondary:hover{
+    color: #E24B3C!important;
+    border:2px solid #E24B3C!important;
+    /* background: #132F40 !important; */
+}
+
 .home-about h4 {
     color: #E24B3C;
     font-family: "Arial Black", Helvetica, sans-serif
@@ -73,7 +100,9 @@ p {
 
 .home-contact.jumbotron  {
     margin-bottom: 0;
+    background: white;
 }
+
 
 .hideInMobile {
     display: none;

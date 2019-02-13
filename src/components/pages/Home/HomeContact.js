@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'reactstrap'
 import { Button, Form, FormGroup, Label, Input, FormText, Jumbotron } from 'reactstrap';
-const HomeContact = () => {
+import FloatingLabelInput from 'react-floating-label-input';
+const HomeContact = ({onChange, onBlur, onFocus, value}) => {
+
     return (
         <Jumbotron className="home-contact">
             <Container>
@@ -16,13 +18,42 @@ const HomeContact = () => {
                 <Col sm="12" md="6">
                     <Form>
                     <FormGroup>
-                    <Input type="text" name="firstname" id="firstName" placeholder="FIRST NAME" />
+                    <div style={{ fontSize: 14}}>
+                    <FloatingLabelInput
+                        id="example-3"
+                        label="FIRST NAME"
+                        onBlur={onBlur}
+                        onChange={onChange}
+                        onFocus={onFocus}
+                        value={value}
+                        type="text"
+                        />
+                    </div>
                     </FormGroup>
                     <FormGroup>
-                    <Input type="text" name="lastname" id="lastName" placeholder="LAST NAME" />
+                    <div style={{ fontSize: 14}}>
+                    <FloatingLabelInput
+                        id="example-3"
+                        label="LAST NAME"
+                        onBlur={onBlur}
+                        onChange={onChange}
+                        value={value}
+                        type="text"
+                        />
+                    </div>
                     </FormGroup>
                     <FormGroup>
-                    <Input type="text" name="email" id="email" placeholder="EMAIL" />
+                    <div style={{ fontSize: 14}}>
+                    <FloatingLabelInput
+                        id="example-3"
+                        label="EMAIL"
+                        onBlur={onBlur}
+                        onChange={onChange}
+                        onFocus={onFocus}
+                        value={value}
+                        type="email"
+                        />
+                    </div>
                     </FormGroup>
                     <FormGroup>
                         <Input type="textarea" name="message" id="HOW CAN WE HELP?" />
